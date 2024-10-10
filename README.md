@@ -1,0 +1,2 @@
+# EduManager
+Student manage system
