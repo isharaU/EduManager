@@ -1,4 +1,4 @@
-package lk.edu.manager.entities;
+package lk.edu.manager.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

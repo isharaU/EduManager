@@ -1,6 +1,6 @@
 package lk.edu.manager.service;
 
-import lk.edu.manager.entities.Teacher;
+import lk.edu.manager.entity.Teacher;
 import lk.edu.manager.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

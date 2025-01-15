@@ -1,18 +1,17 @@
-package lk.edu.manager.entities;
+package lk.edu.manager.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
 import java.util.List;
 
 @Data
 @Entity
-@Table(name = "students")
-public class Student {
+@Table(name = "teachers")
+public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
@@ -23,16 +22,6 @@ public class Student {
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @Column(name = "dateOfBirth")
-    @Temporal(TemporalType.DATE)
-    private Date dateOfBirth;
-
-    @ManyToMany
-    @JoinTable(
-            name = "student_courses",
-            joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "course_id")
-    )
-
+    @OneToMany(mappedBy = "teacher")
     private List<Course> courses;
 }
