@@ -22,4 +22,8 @@ public class Course {
 
     @ManyToMany(mappedBy = "courses")
     private List<Student> students;
+
+    @ManyToOne // Add this annotation to define the relationship with Department
+    @JoinColumn(name = "department_id") // The foreign key column in the "courses" table
+    private Department department; // Add this field to reference the Department entity
 }
