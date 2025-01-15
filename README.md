@@ -119,4 +119,4 @@ This project is licensed under the MIT License.
 ---
 
 ## Contact
-For any queries or issues, please contact [Your Name] at your.email@example.com.
+For any queries or issues, please contact me at isharauditha5@gmail.com.
