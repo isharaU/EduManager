@@ -13,8 +13,13 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/teachers")
 public class TeacherController {
+
+    private final TeacherService teacherService;
+
     @Autowired
-    private TeacherService teacherService;
+    public TeacherController(TeacherService teacherService) {
+        this.teacherService = teacherService;
+    }
 
     @GetMapping
     public List<Teacher> getAllTeachers() {
